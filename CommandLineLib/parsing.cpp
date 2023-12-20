@@ -2,6 +2,11 @@
 #include "parsing.h"
 #include <stdexcept>
 
+std::vector<myCommand*> parsing::getCommands()
+{
+    return commands;
+}
+
 void parsing::addCommand(myCommand* command)
 {
 	commands.push_back(command);

@@ -11,8 +11,11 @@ int main()
     s.push_back("tg le compilo\n");
 
     help h;
+    parsing parse;
+    parse.addCommand(&h);
+
     h.assignment(s);
-    h.launchCommand();
+    h.launchCommand(parse);
 
     std::cout << "Hello World!\n";
 }
