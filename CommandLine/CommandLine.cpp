@@ -2,9 +2,18 @@
 //
 
 #include <iostream>
+#include "../CommandLineLib/help.h"
 
 int main()
 {
+        
+    std::vector < std::string> s;
+    s.push_back("tg le compilo\n");
+
+    help h;
+    h.assignment(s);
+    h.launchCommand();
+
     std::cout << "Hello World!\n";
 }
 

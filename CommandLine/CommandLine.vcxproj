@@ -136,6 +136,11 @@
   <ItemGroup>
     <ClInclude Include="Command\hello.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommandLineLib\CommandLineLib.vcxproj">
+      <Project>{e17c4174-7f46-471c-96d5-8d0a9e251aad}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
