@@ -2,7 +2,7 @@
 #include "help.h"
 #include <iostream>
 
-help::help(): command("--help", "-h",
+help::help(): myCommand("--help", "-h",
 	"Donne des infos sur les commandes",
 	0, false, true)
 {	

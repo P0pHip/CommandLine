@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="command.h" />
+    <ClInclude Include="myCommand.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="help.h" />
     <ClInclude Include="parsing.h" />
@@ -147,7 +147,7 @@
     <ClInclude Include="target.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="command.cpp" />
+    <ClCompile Include="myCommand.cpp" />
     <ClCompile Include="CommandLineLib.cpp" />
     <ClCompile Include="help.cpp" />
     <ClCompile Include="parsing.cpp" />

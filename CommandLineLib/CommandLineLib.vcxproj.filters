@@ -21,7 +21,7 @@
     <ClInclude Include="pch.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="command.h">
+    <ClInclude Include="myCommand.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="parsing.h">
@@ -41,7 +41,7 @@
     <ClCompile Include="pch.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="command.cpp">
+    <ClCompile Include="myCommand.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="parsing.cpp">
