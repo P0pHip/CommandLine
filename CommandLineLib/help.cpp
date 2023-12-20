@@ -13,7 +13,7 @@ void help::assignment(std::vector<std::string> assign) const
 	std::cout << assign[0];
 }
 
-void help::lanchCommand() const
+void help::launchCommand() const
 {
 	std::cout << "coucou";
 }

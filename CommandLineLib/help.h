@@ -8,7 +8,7 @@ public:
 	help();
 
 	void assignment(std::vector<std::string> assign) const;
-	void lanchCommand() const;
+	void launchCommand() const;
 	void launchCommand(parsing parser) const;
 
 };
