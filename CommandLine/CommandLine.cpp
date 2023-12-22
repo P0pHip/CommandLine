@@ -12,7 +12,7 @@ int main()
 
     help h;
     myParsing parse;
-    parse.addCommand(h);
+    parse.addCommand(&h);
 
     h.assignment(s);
     h.launchCommand(parse);

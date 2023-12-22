@@ -16,7 +16,7 @@ void help::assignment(std::vector<std::string> assign) const
 void help::launchCommand(myParsing parser) const 
 {
 	for (const auto& command : parser.getCommands()) {
-		std::cout << command.getName() << " " << command.getAlias() << std::endl;
+		std::cout << command->getName() << " " << command->getAlias() << std::endl;
 	}
 }
 

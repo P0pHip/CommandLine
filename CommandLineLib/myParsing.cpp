@@ -8,12 +8,12 @@ myParsing::myParsing() :mytargets(), commands()
 {
 }
 
-std::vector<myCommand> myParsing::getCommands()
+std::vector<myCommand*> myParsing::getCommands()
 {
     return commands;
 }
 
-void myParsing::addCommand(const myCommand& command)
+void myParsing::addCommand(myCommand* command)
 {
 	commands.push_back(command);
 }
@@ -48,8 +48,8 @@ void myParsing::parse(int argc, char* argv[])
 
         for (const auto& command : commands) {
             // La commande est trouvée, appelle la fonction de rappel associée
-            if (command.getName() == arg) {
-                if (command.isImediatly()) {
+            if (command->getName() == arg) {
+                if (command->isImediatly()) {
                     //command.launchCommand();
                     std::cout << "je launch une commande";
                 }
