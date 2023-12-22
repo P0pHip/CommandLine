@@ -1,32 +1,32 @@
 #include "pch.h"
 #include "myCommand.h"
 
-std::string myCommand::getName()
+std::string myCommand::getName() const
 {
 	return name;
 }
 
-std::string myCommand::getAlias()
+std::string myCommand::getAlias() const
 {
 	return alias;
 }
 
-size_t myCommand::getArgumentNumber()
+size_t myCommand::getArgumentNumber() const
 {
 	return argumentNumber;
 }
 
-std::string myCommand::getDescription()
+std::string myCommand::getDescription() const
 {
 	return description;
 }
 
-bool myCommand::isObligatory()
+bool myCommand::isObligatory() const
 {
 	return obligatoryFlag;
 }
 
-bool myCommand::isImediatly()
+bool myCommand::isImediatly() const
 {
 	return immediatlyFlag;
 }

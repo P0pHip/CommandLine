@@ -1,8 +1,17 @@
 #include "pch.h"
 #include "target.h"
 
-target::target(std::vector<std::string> targs, std::string desc, bool isE): 
+target::target() : targets(), description(), empty(true)
+{
+}
+
+target::target(std::vector<std::string> targs, std::string desc, bool isE):
 	targets(targs), description(desc), empty(isE)
+{
+}
+
+target::target(const target& other)
+	: targets(other.targets), description(other.description), empty(other.empty)
 {
 }
 
@@ -23,4 +32,15 @@ std::string target::getDescription()
 bool target::isEmpty()
 {
 	return empty;
+}
+
+target& target::operator=(const target& other)
+{
+    if (this != &other)
+    {
+        targets = other.targets;
+        description = other.description;
+        empty = other.empty;        
+    }
+    return *this;
 }

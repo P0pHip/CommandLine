@@ -18,10 +18,10 @@ void help::launchCommand() const
 	std::cout << "coucou";
 }
 
-void help::launchCommand(parsing parser) const
+void help::launchCommand(parsing parser) const 
 {
 	for (const auto& command : parser.getCommands()) {
-		std::cout << command->getName() << " " << command->getAlias() << std::endl;
+		std::cout << command.getName() << " " << command.getAlias() << std::endl;
 	}
 }
 
