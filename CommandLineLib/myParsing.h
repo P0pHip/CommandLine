@@ -1,15 +1,16 @@
 #pragma once
 #include <vector>
-#include "myCommand.h"
-#include "target.h"
+#include "myTarget.h"
 
-class parsing
+class myCommand;
+
+class myParsing
 {
 private:
 	std::vector<myCommand> commands;
-	target mytargets;
+	myTarget mytargets;
 public:
-	parsing();
+	myParsing();
 	std::vector<myCommand> getCommands();
 	void addCommand(const myCommand& command);
 	void parse(int argc, char* argv[]);

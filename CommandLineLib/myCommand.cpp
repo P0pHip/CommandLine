@@ -1,6 +1,16 @@
 #include "pch.h"
 #include "myCommand.h"
 
+std::string myCommand::getName() const
+{
+	return name;
+}
+
+std::string myCommand::getAlias() const
+{
+	return alias;
+}
+
 size_t myCommand::getArgumentNumber() const
 {
 	return argumentNumber;

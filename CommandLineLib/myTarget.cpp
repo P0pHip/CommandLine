@@ -1,40 +1,40 @@
 #include "pch.h"
-#include "target.h"
+#include "myTarget.h"
 
-target::target() : targets(), description(), empty(true)
+myTarget::myTarget() : targets(), description(), empty(true)
 {
 }
 
-target::target(std::vector<std::string> targs, std::string desc, bool isE):
+myTarget::myTarget(std::vector<std::string> targs, std::string desc, bool isE):
 	targets(targs), description(desc), empty(isE)
 {
 }
 
-target::target(const target& other)
+myTarget::myTarget(const myTarget& other)
 	: targets(other.targets), description(other.description), empty(other.empty)
 {
 }
 
-target::~target()
+myTarget::~myTarget()
 {
 }
 
-std::vector<std::string> target::getTargets()
+std::vector<std::string> myTarget::getTargets()
 {
 	return targets;
 }
 
-std::string target::getDescription()
+std::string myTarget::getDescription()
 {
 	return description;
 }
 
-bool target::isEmpty()
+bool myTarget::isEmpty()
 {
 	return empty;
 }
 
-target& target::operator=(const target& other)
+myTarget& myTarget::operator=(const myTarget& other)
 {
     if (this != &other)
     {

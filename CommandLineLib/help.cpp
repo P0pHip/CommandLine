@@ -13,12 +13,7 @@ void help::assignment(std::vector<std::string> assign) const
 	std::cout << assign[0];
 }
 
-void help::launchCommand() const
-{
-	std::cout << "coucou";
-}
-
-void help::launchCommand(parsing parser) const 
+void help::launchCommand(myParsing parser) const 
 {
 	for (const auto& command : parser.getCommands()) {
 		std::cout << command.getName() << " " << command.getAlias() << std::endl;

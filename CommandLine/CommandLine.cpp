@@ -11,7 +11,7 @@ int main()
     s.push_back("tg le compilo\n");
 
     help h;
-    parsing parse;
+    myParsing parse;
     parse.addCommand(h);
 
     h.assignment(s);

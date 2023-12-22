@@ -2,22 +2,22 @@
 #include <vector>
 #include <string>
 
-class target
+class myTarget
 {
 private:
 	std::vector<std::string> targets;
 	std::string description;
 	bool empty;
 public:
-	target();
-	target(std::vector<std::string> targs,
+	myTarget();
+	myTarget(std::vector<std::string> targs,
 		std::string desc,
 		bool empty);
-	target(const target& other);
-	~target();
+	myTarget(const myTarget& other);
+	~myTarget();
 	std::vector<std::string> getTargets();
 	std::string getDescription();
 	bool isEmpty();
-	target& operator=(const target& other);
+	myTarget& operator=(const myTarget& other);
 };
 

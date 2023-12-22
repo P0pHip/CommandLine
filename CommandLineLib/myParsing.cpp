@@ -1,22 +1,24 @@
 #include "pch.h"
-#include "parsing.h"
+#include "myParsing.h"
+#include "myCommand.h"
 #include <stdexcept>
+#include <iostream>
 
-parsing::parsing() :mytargets(), commands()
+myParsing::myParsing() :mytargets(), commands()
 {
 }
 
-std::vector<myCommand> parsing::getCommands()
+std::vector<myCommand> myParsing::getCommands()
 {
     return commands;
 }
 
-void parsing::addCommand(const myCommand& command)
+void myParsing::addCommand(const myCommand& command)
 {
 	commands.push_back(command);
 }
 
-void parsing::parse(int argc, char* argv[])
+void myParsing::parse(int argc, char* argv[])
 {
     if (argc < 2) {
         throw std::invalid_argument("Aucune commande spécifiée.");
@@ -36,7 +38,7 @@ void parsing::parse(int argc, char* argv[])
         else argTarg = arg; break;
     }
     std::string descTarget = "les cibles sont des fichiers du meme type que:"+argTarg+"\n";
-    mytargets = target(vTargets, descTarget, isTarg);
+    mytargets = myTarget(vTargets, descTarget, isTarg);
     // les cibles on été trouvés
 
 
@@ -48,7 +50,8 @@ void parsing::parse(int argc, char* argv[])
             // La commande est trouvée, appelle la fonction de rappel associée
             if (command.getName() == arg) {
                 if (command.isImediatly()) {
-                    command.launchCommand();
+                    //command.launchCommand();
+                    std::cout << "je launch une commande";
                 }
             }
             // je sais pas encore

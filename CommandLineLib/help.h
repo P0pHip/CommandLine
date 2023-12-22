@@ -1,14 +1,15 @@
 #pragma once
 #include "myCommand.h"
-#include "parsing.h"
+#include "myParsing.h"
 
 class help : public myCommand
 {
 public:
 	help();
 
-	void assignment(std::vector<std::string> assign) const;
-	void launchCommand() const;
-	void launchCommand(parsing parser) const;
+	std::string getName() const;
+	std::string getAlias() const;
+	void assignment(std::vector<std::string> assign) const;	
+	void launchCommand(myParsing parser) const;
 };
 

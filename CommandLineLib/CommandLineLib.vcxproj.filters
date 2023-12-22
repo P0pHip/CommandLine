@@ -24,13 +24,13 @@
     <ClInclude Include="myCommand.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="parsing.h">
+    <ClInclude Include="myParsing.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="help.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="target.h">
+    <ClInclude Include="myTarget.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -44,13 +44,13 @@
     <ClCompile Include="myCommand.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="parsing.cpp">
+    <ClCompile Include="myParsing.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="help.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="target.cpp">
+    <ClCompile Include="myTarget.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

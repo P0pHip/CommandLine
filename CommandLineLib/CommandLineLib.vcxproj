@@ -142,22 +142,22 @@
     <ClInclude Include="myCommand.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="help.h" />
-    <ClInclude Include="parsing.h" />
+    <ClInclude Include="myParsing.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="target.h" />
+    <ClInclude Include="myTarget.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="myCommand.cpp" />
     <ClCompile Include="CommandLineLib.cpp" />
     <ClCompile Include="help.cpp" />
-    <ClCompile Include="parsing.cpp" />
+    <ClCompile Include="myParsing.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="target.cpp" />
+    <ClCompile Include="myTarget.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
