@@ -4,19 +4,15 @@
 #include <iostream>
 #include "../CommandLineLib/help.h"
 
-int main()
+int main(int argc, char* argv[])
 {
         
-    std::vector < std::string> s;
-    s.push_back("tg le compilo\n");
-
     help h;
-    myParsing parse;
+    myParsing parse(argc, argv);
     parse.addCommand(&h);
 
-    h.assignment(s);
-    h.launchCommand(parse);
-
+   
+    parse.parse();
     std::cout << "Hello World!\n";
 }
 
