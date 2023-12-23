@@ -34,8 +34,9 @@ bool myCommand::isImmediatly() const
 myCommand::myCommand(std::string name, std::string alias,
 	std::string description, size_t argumentNumber, 
 	bool obligatoryFlag, bool immediatlyFlag)
-	: name(name),alias(alias), myArgs(), description(description),
+	: name(name),alias(alias), myArgs(),myTargs(), description(description),
 	argumentNumber(argumentNumber),obligatoryFlag(obligatoryFlag),
 	immediatlyFlag(immediatlyFlag)
 {	
 }
+

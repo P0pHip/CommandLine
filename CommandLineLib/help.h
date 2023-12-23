@@ -11,6 +11,7 @@ public:
 	help(std::vector<myCommand*> allCommands);
 
 	void addAllCommands(std::vector<myCommand*> allComms);
+	void addTargs(myTarget target);
 	void assignment(std::vector<std::string> assign);	
 	void launchCommand() const;
 	

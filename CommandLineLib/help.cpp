@@ -19,6 +19,11 @@ void help::addAllCommands(std::vector<myCommand*> allComms)
 	allCommands = allComms;
 }
 
+void help::addTargs(myTarget target)
+{
+	myTargs = target;
+}
+
 void help::assignment(std::vector<std::string> assign)
 {	
 	myArgs = assign;

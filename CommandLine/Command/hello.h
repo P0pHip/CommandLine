@@ -7,6 +7,7 @@ public:
 	hello();
 
 	void assignment(std::vector<std::string> assign);
+	void addTargs(myTarget target);
 	void launchCommand() const;
 };
 
