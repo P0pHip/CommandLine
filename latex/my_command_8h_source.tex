@@ -1,0 +1,41 @@
+\doxysection{my\+Command.\+h}
+\hypertarget{my_command_8h_source}{}\label{my_command_8h_source}\index{CommandLineLib/myCommand.h@{CommandLineLib/myCommand.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}myParsing.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmy_command}{myCommand}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00010\ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{00011\ \ \ \ \ std::string\ alias;}
+\DoxyCodeLine{00012\ \ \ \ \ std::vector<std::string>\ myArgs;}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classmy_target}{myTarget}}\ myTargs;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ argumentNumber;}
+\DoxyCodeLine{00016\ \ \ \ \ std::string\ description;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ obligatoryFlag;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ immediatlyFlag;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ std::string\ getName()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ getAlias()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ getArgumentNumber()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ \ \ \ \ std::string\ getDescription()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ isObligatory()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ isImmediatly()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classmy_command}{myCommand}}(std::string\ name,\ std::string\ alias,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::string\ description,\ \textcolor{keywordtype}{size\_t}\ argumentNumber,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ obligatoryFlag\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ immediatlyFlag\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ assignment(std::vector<std::string>\ assign)\ =\ 0;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ addTargs(\mbox{\hyperlink{classmy_target}{myTarget}}\ target)\ =\ 0;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ launchCommand()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classmy_command}{\string~myCommand}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00035\ \};}
+
+\end{DoxyCode}

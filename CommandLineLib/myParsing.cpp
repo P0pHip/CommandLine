@@ -29,6 +29,9 @@ void myParsing::addCommand(myCommand* command)
 	commands.push_back(command);
 }
 
+/**
+* Fonction Principale du programme c'est celle qui analyse et décortique la ligne de commande.
+    */
 void myParsing::parse()
 {
     // on ajoute a Help la liste des commandes

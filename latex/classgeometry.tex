@@ -1,0 +1,93 @@
+\doxysection{geometry Class Reference}
+\hypertarget{classgeometry}{}\label{classgeometry}\index{geometry@{geometry}}
+Inheritance diagram for geometry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classgeometry}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgeometry_a69d69bf9b9984761e8e296e9f826147a}{assignment}} (std\+::vector$<$ std\+::string $>$ assign)
+\item 
+void \mbox{\hyperlink{classgeometry_a546e15ec64a0b65705054fc35b05ea5a}{add\+Targs}} (\mbox{\hyperlink{classmy_target}{my\+Target}} target)
+\item 
+void \mbox{\hyperlink{classgeometry_adbe6f6d09f1508170407046516cb5b23}{launch\+Command}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmy_command}{my\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries get\+Name} () const
+\item 
+std\+::string {\bfseries get\+Alias} () const
+\item 
+size\+\_\+t {\bfseries get\+Argument\+Number} () const
+\item 
+std\+::string {\bfseries get\+Description} () const
+\item 
+bool {\bfseries is\+Obligatory} () const
+\item 
+bool {\bfseries is\+Immediatly} () const
+\item 
+{\bfseries my\+Command} (std\+::string name, std\+::string alias, std\+::string description, size\+\_\+t argument\+Number, bool obligatory\+Flag=false, bool immediatly\+Flag=false)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classmy_command}{my\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries name}
+\item 
+std\+::string {\bfseries alias}
+\item 
+std\+::vector$<$ std\+::string $>$ {\bfseries my\+Args}
+\item 
+\mbox{\hyperlink{classmy_target}{my\+Target}} {\bfseries my\+Targs}
+\item 
+size\+\_\+t {\bfseries argument\+Number}
+\item 
+std\+::string {\bfseries description}
+\item 
+bool {\bfseries obligatory\+Flag}
+\item 
+bool {\bfseries immediatly\+Flag}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgeometry_a546e15ec64a0b65705054fc35b05ea5a}\label{classgeometry_a546e15ec64a0b65705054fc35b05ea5a} 
+\index{geometry@{geometry}!addTargs@{addTargs}}
+\index{addTargs@{addTargs}!geometry@{geometry}}
+\doxysubsubsection{\texorpdfstring{addTargs()}{addTargs()}}
+{\footnotesize\ttfamily void geometry\+::add\+Targs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_target}{my\+Target}}}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classmy_command}{my\+Command}}.
+
+\Hypertarget{classgeometry_a69d69bf9b9984761e8e296e9f826147a}\label{classgeometry_a69d69bf9b9984761e8e296e9f826147a} 
+\index{geometry@{geometry}!assignment@{assignment}}
+\index{assignment@{assignment}!geometry@{geometry}}
+\doxysubsubsection{\texorpdfstring{assignment()}{assignment()}}
+{\footnotesize\ttfamily void geometry\+::assignment (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{assign }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classmy_command}{my\+Command}}.
+
+\Hypertarget{classgeometry_adbe6f6d09f1508170407046516cb5b23}\label{classgeometry_adbe6f6d09f1508170407046516cb5b23} 
+\index{geometry@{geometry}!launchCommand@{launchCommand}}
+\index{launchCommand@{launchCommand}!geometry@{geometry}}
+\doxysubsubsection{\texorpdfstring{launchCommand()}{launchCommand()}}
+{\footnotesize\ttfamily void geometry\+::launch\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classmy_command}{my\+Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Command\+Line/\+Command/geometry.\+h\item 
+Command\+Line/\+Command/geometry.\+cpp\end{DoxyCompactItemize}

@@ -17,6 +17,8 @@ public:
 	int getArgc() const;
 	char** getArgv();
 	void addCommand(myCommand* command);
-	void parse();
+	
+	void parse(); 
+	
 };
 

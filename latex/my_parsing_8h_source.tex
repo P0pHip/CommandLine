@@ -1,0 +1,28 @@
+\doxysection{my\+Parsing.\+h}
+\hypertarget{my_parsing_8h_source}{}\label{my_parsing_8h_source}\index{CommandLineLib/myParsing.h@{CommandLineLib/myParsing.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}myTarget.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmy_command}{myCommand}};}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmy_parsing}{myParsing}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00010\ \ \ \ \ std::vector<myCommand*>\ commands;}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{classmy_target}{myTarget}}\ mytargets;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ argc;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{char}**\ argv;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classmy_parsing}{myParsing}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}*\ argv[]);}
+\DoxyCodeLine{00016\ \ \ \ \ std::vector<myCommand*>\ getCommands();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ getArgc()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{char}**\ getArgv();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ addCommand(\mbox{\hyperlink{classmy_command}{myCommand}}*\ command);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ parse();}
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+
+\end{DoxyCode}

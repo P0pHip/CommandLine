@@ -1,0 +1,74 @@
+\doxysection{my\+Command Class Reference}
+\hypertarget{classmy_command}{}\label{classmy_command}\index{myCommand@{myCommand}}
+Inheritance diagram for my\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmy_command}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmy_command_a190606e51ece20a7bae821eafe4e9452}\label{classmy_command_a190606e51ece20a7bae821eafe4e9452} 
+std\+::string {\bfseries get\+Name} () const
+\item 
+\Hypertarget{classmy_command_a049ad775942942333e1660e44d008830}\label{classmy_command_a049ad775942942333e1660e44d008830} 
+std\+::string {\bfseries get\+Alias} () const
+\item 
+\Hypertarget{classmy_command_aa34395a457aeee7e1e21f2eff4829fb9}\label{classmy_command_aa34395a457aeee7e1e21f2eff4829fb9} 
+size\+\_\+t {\bfseries get\+Argument\+Number} () const
+\item 
+\Hypertarget{classmy_command_a970f5a933de1c42f8e7d0cee60f54aa6}\label{classmy_command_a970f5a933de1c42f8e7d0cee60f54aa6} 
+std\+::string {\bfseries get\+Description} () const
+\item 
+\Hypertarget{classmy_command_a275d7fba858ddf0134a347b73fbcf1ac}\label{classmy_command_a275d7fba858ddf0134a347b73fbcf1ac} 
+bool {\bfseries is\+Obligatory} () const
+\item 
+\Hypertarget{classmy_command_ac257dcfa25c89cd81523672eacdec4db}\label{classmy_command_ac257dcfa25c89cd81523672eacdec4db} 
+bool {\bfseries is\+Immediatly} () const
+\item 
+\Hypertarget{classmy_command_ae6307566ec741a2b1df0ec60a90c169a}\label{classmy_command_ae6307566ec741a2b1df0ec60a90c169a} 
+{\bfseries my\+Command} (std\+::string name, std\+::string alias, std\+::string description, size\+\_\+t argument\+Number, bool obligatory\+Flag=false, bool immediatly\+Flag=false)
+\item 
+\Hypertarget{classmy_command_a5cbb5c8f5e7d7177275c635b1ce7c39b}\label{classmy_command_a5cbb5c8f5e7d7177275c635b1ce7c39b} 
+virtual void {\bfseries assignment} (std\+::vector$<$ std\+::string $>$ assign)=0
+\item 
+\Hypertarget{classmy_command_aa43707917522bcfe1448f79067909231}\label{classmy_command_aa43707917522bcfe1448f79067909231} 
+virtual void {\bfseries add\+Targs} (\mbox{\hyperlink{classmy_target}{my\+Target}} target)=0
+\item 
+\Hypertarget{classmy_command_af012163fed87d08badc0b7eece9cdbe9}\label{classmy_command_af012163fed87d08badc0b7eece9cdbe9} 
+virtual void {\bfseries launch\+Command} () const =0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmy_command_ab642d21a3135e1adbc00857854ab354c}\label{classmy_command_ab642d21a3135e1adbc00857854ab354c} 
+std\+::string {\bfseries name}
+\item 
+\Hypertarget{classmy_command_a33930be8d53c2992fe5f767649e08ac8}\label{classmy_command_a33930be8d53c2992fe5f767649e08ac8} 
+std\+::string {\bfseries alias}
+\item 
+\Hypertarget{classmy_command_a1776c36e0634ed2a2d16b140c5ca1d79}\label{classmy_command_a1776c36e0634ed2a2d16b140c5ca1d79} 
+std\+::vector$<$ std\+::string $>$ {\bfseries my\+Args}
+\item 
+\Hypertarget{classmy_command_a20e112fad41d4a3ca61d9aafa31aaf33}\label{classmy_command_a20e112fad41d4a3ca61d9aafa31aaf33} 
+\mbox{\hyperlink{classmy_target}{my\+Target}} {\bfseries my\+Targs}
+\item 
+\Hypertarget{classmy_command_a7d074415822a4461d813dbc3804b9cd5}\label{classmy_command_a7d074415822a4461d813dbc3804b9cd5} 
+size\+\_\+t {\bfseries argument\+Number}
+\item 
+\Hypertarget{classmy_command_a030154bb602d9bad4b9e825edaaa6224}\label{classmy_command_a030154bb602d9bad4b9e825edaaa6224} 
+std\+::string {\bfseries description}
+\item 
+\Hypertarget{classmy_command_aa2d45480394451ff32ef432e99f5add9}\label{classmy_command_aa2d45480394451ff32ef432e99f5add9} 
+bool {\bfseries obligatory\+Flag}
+\item 
+\Hypertarget{classmy_command_a8bf90ad14a4e0475936161120600958d}\label{classmy_command_a8bf90ad14a4e0475936161120600958d} 
+bool {\bfseries immediatly\+Flag}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Command\+Line\+Lib/my\+Command.\+h\item 
+Command\+Line\+Lib/my\+Command.\+cpp\end{DoxyCompactItemize}

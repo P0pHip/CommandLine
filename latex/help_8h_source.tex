@@ -1,0 +1,25 @@
+\doxysection{help.\+h}
+\hypertarget{help_8h_source}{}\label{help_8h_source}\index{CommandLineLib/help.h@{CommandLineLib/help.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}myCommand.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}myParsing.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classhelp}{help}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmy_command}{myCommand}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ std::vector<myCommand*>\ allCommands;\ \ \ \ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{classhelp}{help}}();}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{classhelp}{help}}(std::vector<myCommand*>\ allCommands);}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ addAllCommands(std::vector<myCommand*>\ allComms);}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ addTargs(\mbox{\hyperlink{classmy_target}{myTarget}}\ target);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ assignment(std::vector<std::string>\ assign);\ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ launchCommand()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00017\ \ \ \ \ }
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+
+\end{DoxyCode}
