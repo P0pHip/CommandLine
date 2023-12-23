@@ -6,7 +6,7 @@ class hello : public myCommand
 public:
 	hello();
 
-	void assignment(std::vector<std::string> assign) const;
-	void launchCommand(myParsing parser) const;
+	void assignment(std::vector<std::string> assign);
+	void launchCommand() const;
 };
 

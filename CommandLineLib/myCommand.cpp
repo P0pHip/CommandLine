@@ -26,7 +26,7 @@ bool myCommand::isObligatory() const
 	return obligatoryFlag;
 }
 
-bool myCommand::isImediatly() const
+bool myCommand::isImmediatly() const
 {
 	return immediatlyFlag;
 }
@@ -34,7 +34,7 @@ bool myCommand::isImediatly() const
 myCommand::myCommand(std::string name, std::string alias,
 	std::string description, size_t argumentNumber, 
 	bool obligatoryFlag, bool immediatlyFlag)
-	: name(name),alias(alias),description(description),
+	: name(name),alias(alias), myArgs(), description(description),
 	argumentNumber(argumentNumber),obligatoryFlag(obligatoryFlag),
 	immediatlyFlag(immediatlyFlag)
 {	

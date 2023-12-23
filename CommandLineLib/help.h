@@ -4,11 +4,15 @@
 
 class help : public myCommand
 {
+private:
+	std::vector<myCommand*> allCommands;	
 public:
 	help();
+	help(std::vector<myCommand*> allCommands);
 
-	void assignment(std::vector<std::string> assign) const;	
-	void launchCommand(myParsing parser) const;
+	void addAllCommands(std::vector<myCommand*> allComms);
+	void assignment(std::vector<std::string> assign);	
+	void launchCommand() const;
 	
 };
 

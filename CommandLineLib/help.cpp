@@ -2,20 +2,31 @@
 #include "help.h"
 #include <iostream>
 
-help::help(): myCommand("--help", "-h",
+help::help():myCommand("--help", "-h",
 	"Donne des infos sur les commandes",
-	0, false, true)
-{	
-}
-
-void help::assignment(std::vector<std::string> assign) const
-{	
-	std::cout << assign[0];
-}
-
-void help::launchCommand(myParsing parser) const 
+	0, false, true), allCommands()
 {
-	if (parser.getArgc() < 2) {
+}
+
+help::help(std::vector<myCommand*> allcommands): myCommand("--help", "-h",
+	"Donne des infos sur les commandes",
+	0, false, true), allCommands(allcommands)
+{	
+}
+
+void help::addAllCommands(std::vector<myCommand*> allComms)
+{
+	allCommands = allComms;
+}
+
+void help::assignment(std::vector<std::string> assign)
+{	
+	myArgs = assign;
+}
+
+void help::launchCommand() const 
+{
+	if (myArgs.size() < 2) {
 		// Afficher l'aide de la ligne de commande
 		std::cout << "Usage: monexe [ --help|-h ] Files+" << std::endl;
 		std::cout << "Files: Files to compile" << std::endl;
@@ -23,7 +34,7 @@ void help::launchCommand(myParsing parser) const
 		std::cout << "--help, -h : Print this help" << std::endl;
 	}
 	else {
-		for (const auto& command : parser.getCommands()) {
+		for (const auto& command : allCommands) {
 			std::cout << command->getName() << " " << command->getAlias() << std::endl;
 		}
 	}
