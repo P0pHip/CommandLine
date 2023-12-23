@@ -3,7 +3,7 @@
 #include <fstream>
 
 geometry::geometry() : myCommand("--geometry", "-g",
-	"Detecte si le les arguments nous donne un carre ou un rectangle",
+	"Detecte si les arguments nous donne un carre ou un rectangle",
 	2, false, false)
 {
 }

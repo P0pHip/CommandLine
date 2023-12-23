@@ -79,63 +79,90 @@ void myParsing::parse()
         mytargets = myTarget(vTargets, descTarget, isTarg);
         // les cibles on été trouvés
 
-        //vector pour stochker les methodes non imédiates;
-        std::vector<myCommand*> notImmediatlys;
+        //on rajoute le code pour les commande obligatoire ( bordel c'est chiant )
+        bool isExists = false;
+        bool stop = false;
 
-        // On passe a la recherche des commandes
-        for (int i = 1; i < argc; ++i) {
-            const std::string arg = argv[i];            
-            if (arg.find('-') != std::string::npos || arg.find("--") != std::string::npos) {
-                for (const auto& command : commands) {
-                    // La commande est trouvée, appelle la fonction de rappel associée
-                    if (command->getName() == arg || command->getAlias() == arg) {
-                        if (command->getArgumentNumber() > 0) {
-                            if (command->getArgumentNumber() + i < argc) {
-                                std::vector<std::string> myArgs;
-                                for (int j = 1; j <= command->getArgumentNumber(); j++) {
-                                    myArgs.push_back(argv[i + j]);
-                                }
-                                command->assignment(myArgs);
-                            }
-                            else {
-                                std::cout << "le nombre d'argument n'est pas bon pour: " << command->getName() << std::endl;
-                                break; //quitte la boucle for car il n'ya pas assez d'argument;
-                            }
+        for (const auto& command : commands) {
+            if (command->isObligatory()) {                
+                for (int i = 1; i < argc; ++i) {
+                    const std::string arg = argv[i];
+                    if (arg.find('-') != std::string::npos || arg.find("--") != std::string::npos) {
+                        if (command->getName() == arg || command->getAlias() == arg) {
+                            isExists = true;
                         }
-                        if (command->isImmediatly()) {
-                            if (auto* helpCommand = dynamic_cast<help*>(command)) {
-                                std::vector<std::string> arguments;
-                                for (int i = 0; i < argc; ++i) {
-                                    arguments.push_back(argv[i]);
-                                }
-                                helpCommand->assignment(arguments);
-                                helpCommand->addAllCommands(commands);
-                            }
-                            std::cout << "je launch une commande immediate\n";
-                            command->launchCommand();
-                            // ya un warning mais il est pas possible selon moi
-                            std::cout << std::endl << std::endl;
-                            break;
-                        }
-                        else {                            
-                            notImmediatlys.push_back(command);
-                        }
-                        break;
-                    }                   
-                }            
-            }
-            else {
-                if (arg.find('-') != std::string::npos || arg.find("--") != std::string::npos) {
-                    std::cout << "Commande inconnue : " << arg << std::endl;
-                }                
+                    }
+                }
+                if (!isExists) {
+                    std::cerr << "La commande obligatoire " << command->getName() << " n'est pas presente !" << std::endl;
+                    stop = true;
+                    break;
+                }
             }
         }
-        // lancement de toutes les commandes non immediates.
-        for (const auto& command : notImmediatlys) {
-            std::cout << "je launch une commande non immediate\n";
-            command->addTargs(mytargets);
-            command->launchCommand();
-            std::cout << std::endl << std::endl;
+       
+
+
+
+        //vector pour stocker les methodes non imédiates;
+        std::vector<myCommand*> notImmediatlys;
+
+        if (!stop) {
+            // On passe a la recherche des commandes
+            for (int i = 1; i < argc; ++i) {
+                const std::string arg = argv[i];
+                if (arg.find('-') != std::string::npos || arg.find("--") != std::string::npos) {
+                    for (const auto& command : commands) {
+                        // La commande est trouvée, appelle la fonction de rappel associée
+                        if (command->getName() == arg || command->getAlias() == arg) {
+                            if (command->getArgumentNumber() > 0) {
+                                if (command->getArgumentNumber() + i < argc) {
+                                    std::vector<std::string> myArgs;
+                                    for (int j = 1; j <= command->getArgumentNumber(); j++) {
+                                        myArgs.push_back(argv[i + j]);
+                                    }
+                                    command->assignment(myArgs);
+                                }
+                                else {
+                                    std::cout << "le nombre d'argument n'est pas bon pour: " << command->getName() << std::endl;
+                                    break; //quitte la boucle for car il n'ya pas assez d'argument;
+                                }
+                            }
+                            if (command->isImmediatly()) {
+                                if (auto* helpCommand = dynamic_cast<help*>(command)) {
+                                    std::vector<std::string> arguments;
+                                    for (int i = 0; i < argc; ++i) {
+                                        arguments.push_back(argv[i]);
+                                    }
+                                    helpCommand->assignment(arguments);
+                                    helpCommand->addAllCommands(commands);
+                                }
+                                std::cout << "je launch une commande immediate\n";
+                                command->launchCommand();
+                                // ya un warning mais il est pas possible selon moi
+                                std::cout << std::endl << std::endl;
+                                break;
+                            }
+                            else {
+                                notImmediatlys.push_back(command);
+                            }
+                            break;
+                        }
+                    }
+                }
+                else {
+                    if (arg.find('-') != std::string::npos || arg.find("--") != std::string::npos) {
+                        std::cout << "Commande inconnue : " << arg << std::endl;
+                    }
+                }
+            }
+            // lancement de toutes les commandes non immediates.
+            for (const auto& command : notImmediatlys) {
+                std::cout << "je launch une commande non immediate\n";
+                command->addTargs(mytargets);
+                command->launchCommand();
+                std::cout << std::endl << std::endl;
+            }
         }
     }
 }

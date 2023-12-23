@@ -39,8 +39,12 @@ void help::launchCommand() const
 		std::cout << "--help, -h : Print this help" << std::endl;
 	}
 	else {
-		for (const auto& command : allCommands) {
-			std::cout << command->getName() << " " << command->getAlias() << std::endl;
+		std::cout << "Help:\n";
+		for (const auto& command : allCommands) {			
+			std::cout << command->getName() << " " << command->getAlias() 
+				<< " la fonction a besoin de " << command->getArgumentNumber()
+				<< " arguments, "
+				<< command->getDescription() <<std::endl;
 		}
 	}
 }
