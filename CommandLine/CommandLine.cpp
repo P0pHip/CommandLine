@@ -3,13 +3,15 @@
 
 #include <iostream>
 #include "../CommandLineLib/help.h"
+#include "Command/hello.h"
 
 int main(int argc, char* argv[])
 {
-        
-    help h;
+    hello hey;
+    help help;
     myParsing parse(argc, argv);
-    parse.addCommand(&h);
+    parse.addCommand(&help);
+    parse.addCommand(&hey);
 
    
     parse.parse();

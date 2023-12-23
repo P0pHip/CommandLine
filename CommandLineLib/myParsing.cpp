@@ -65,11 +65,15 @@ void myParsing::parse()
                         command->launchCommand(*this);
                         std::cout << "je launch une commande\n";
                     }
+
+                    break;
                 }
+                
                 // je sais pas encore
 
                 else {
-                    throw std::invalid_argument("Commande inconnue : " + arg);
+                    std::cout << "Commande inconnue : " << arg << std::endl;
+                    break;
                 }
             }
 
