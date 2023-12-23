@@ -1,0 +1,1 @@
+Ceci est un rectangle de 1024 par 32

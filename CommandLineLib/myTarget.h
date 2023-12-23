@@ -15,7 +15,7 @@ public:
 		bool empty);
 	myTarget(const myTarget& other);
 	~myTarget();
-	std::vector<std::string> getTargets();
+	std::vector<std::string> getTargets() const;
 	std::string getDescription();
 	bool isEmpty();
 	myTarget& operator=(const myTarget& other);

@@ -4,15 +4,17 @@
 #include <iostream>
 #include "../CommandLineLib/help.h"
 #include "Command/hello.h"
+#include "Command/geometry.h"
 
 int main(int argc, char* argv[])
 {
     hello hey;
     help help;
+    geometry g;
     myParsing parse(argc, argv);
     parse.addCommand(&help);
     parse.addCommand(&hey);
-
+    parse.addCommand(&g);
    
     parse.parse();
     std::cout << "Hello World!\n";

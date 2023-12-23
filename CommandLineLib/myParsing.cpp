@@ -66,10 +66,13 @@ void myParsing::parse()
                 vTargets.push_back(arg);
                 isTarg = true;
             }
-            if (arg.find('.') == std::string::npos) {
+            else if (arg.find('.') == std::string::npos) {
                 break; // je quitte pour que argTarg reste vide
             }
-            else argTarg = arg; break;
+            else {
+                argTarg = arg;
+                break;
+            }
         }
         std::string descTarget = "les cibles sont des fichiers du meme type que: " + argTarg + "\n";
         std::cout << descTarget << std::endl;
@@ -130,6 +133,7 @@ void myParsing::parse()
         // lancement de toutes les commandes non immediates.
         for (const auto& command : notImmediatlys) {
             std::cout << "je launch une commande non immediate\n";
+            command->addTargs(mytargets);
             command->launchCommand();
             std::cout << std::endl << std::endl;
         }

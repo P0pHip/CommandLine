@@ -129,12 +129,14 @@
   <ItemGroup>
     <ClCompile Include="CommandLine.cpp" />
     <ClCompile Include="Command\hello.cpp" />
+    <ClCompile Include="Command\geometry.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Command\hello.h" />
+    <ClInclude Include="Command\geometry.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommandLineLib\CommandLineLib.vcxproj">

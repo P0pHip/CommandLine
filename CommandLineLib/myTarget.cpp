@@ -19,7 +19,7 @@ myTarget::~myTarget()
 {
 }
 
-std::vector<std::string> myTarget::getTargets()
+std::vector<std::string> myTarget::getTargets() const
 {
 	return targets;
 }
